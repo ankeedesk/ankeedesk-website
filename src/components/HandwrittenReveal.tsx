@@ -54,14 +54,6 @@ const HandwrittenReveal: React.FC<HandwrittenRevealProps> = ({
           viewBox={`0 0 ${dims.width} ${lines.length > 1 ? lineHeight * lines.length + 10 : dims.height}`}
           style={{ overflow: "visible", display: "block" }}
         >
-          <style>
-            {`
-              @font-face {
-                font-family: "JustMeAgainDownHere";
-                src: url("/fonts/JustMeAgainDownHere-Regular.ttf") format("truetype");
-              }
-            `}
-          </style>
           {lines.map((line, lineIdx) => {
             const lineDelay = delay + lineIdx * (duration * 0.4)
 
